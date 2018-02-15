@@ -5,17 +5,36 @@
 </head>
 <body>
 
-<h1>
+	<img src="https://www.wigwamgolf.com/wp-content/uploads/2016/10/tournaments_main.jpg">
+
 	<ul>
 	  <li><a href="./Home.html">Home</a></li>
-	  <li><a href="./News.html">News</a></li>
-	  <li><a href="./Contact.html">Contact</a></li>
-	  <li><a class="active" href="./About.html">About</a></li>
+	  <li><a href="./News.html">Courses</a></li>
+	  <li><a href="./Contact.html">Tournaments</a></li>
+	  <li><a class="active" href="./About.html">Contact</a></li>
 	</ul>
-</h1>
-<div>
-	<p>Courses Near You</p>
-</div>
+
+	<div id="nav-search-panera">
+	                <input type="text" placeholder="City/State/Zip Code" id="nav_find_panera">
+	                <input class="findPanera gatrack" data-lb-track="store_locator" data-ga-track="Engagement||FindPanera||Search:Header:Locations:FindPanera" value="Find" type="submit">
+	                <input type="hidden" name="limit" id="limit" value="10">
+	            </div>
+
+	<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(44.9536, -93.2895),
+    zoom: 21,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADvVkwieYp-od5-uDmEs1A1I5EiZWyENA&callback=myMap"></script>
 
 </body>
 </html>
